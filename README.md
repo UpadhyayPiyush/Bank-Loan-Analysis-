@@ -125,3 +125,14 @@ CREATE TABLE Fact_Loan (
 - **Focus on improving recovery mechanisms for bad loans**: With bad loan recovery at ~57% compared to >100% recovery for good loans, early intervention strategies such as proactive reminders and structured repayment plans can help improve recoveries.
 - **Prioritize low-risk segments for portfolio growth**: Fully Paid and Current loans contribute positively to the portfolio, generating surplus collections over funded amounts. Expanding lending in these segments can improve overall profitability.
 - **Leverage data-driven monitoring for ongoing risk management**: Regular tracking of Charge-Off Rate, Recovery Rate, Avg DTI, and Interest Rate trends through dashboards can help identify emerging risks early and support timely decision-making.
+
+## Report View  
+![Home Page](https://github.com/UpadhyayPiyush/Bank-Loan-Analysis-/blob/main/Home.png)
+![Overview Page](https://github.com/UpadhyayPiyush/Bank-Loan-Analysis-/blob/main/Overview.png)
+![Summary Page](https://github.com/UpadhyayPiyush/Bank-Loan-Analysis-/blob/main/Summary.png)
+![Details Page](https://github.com/UpadhyayPiyush/Bank-Loan-Analysis-/blob/main/Details.png)
+
+## Conclusion 
+This project demonstrates how financial lending data can be transformed into actionable insights through structured data modeling, advanced SQL analysis, and interactive business intelligence reporting. By combining portfolio-level metrics with detailed risk and recovery analysis, the project highlights key factors influencing loan performance and credit risk.
+The analysis shows that charged-off loans contribute a measurable financial loss, while good loans generate surplus recoveries, emphasizing the importance of borrower quality and effective risk management. The Power BI dashboards provide a clear and intuitive view of portfolio health, enabling stakeholders to monitor trends, assess risk drivers, and support data-driven lending decisions.
+Overall, this project reflects a practical application of financial analytics and credit risk analysis, making it highly relevant for roles in data analytics, banking, and financial services.
