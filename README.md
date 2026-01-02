@@ -98,30 +98,30 @@ CREATE TABLE Fact_Loan (
 ```
 
 ## Tools & Technologies 
-**MySQL**
-- Used to store, manage, and query structured loan data. Advanced SQL techniques such as CTEs, window functions, and subqueries were applied for in-depth financial and risk analysis.
-**Power BI**
-- Used for data modeling, DAX-based calculations, and building interactive, multi-page dashboards with KPIs, slicers, drill-throughs, and risk-focused visualizations.
-**DAX (Data Analysis Expressions)**
-- Implemented to calculate key financial and risk metrics including MTD trends, Charge-Off Rate, Recovery Rate, Average DTI, and portfolio-level aggregations.
-**Power Query**
-- Used for data transformation, data type handling (especially date parsing), and preparing clean datasets for analytics.
-**GitHub**
-- Used for version control and project documentation, enabling structured presentation of the analytics workflow and results.
+**MySQL**: Used to store, manage, and query structured loan data. Advanced SQL techniques such as CTEs, window functions, and subqueries were applied for in-depth financial and risk analysis.
+**Power BI**: Used for data modeling, DAX-based calculations, and building interactive, multi-page dashboards with KPIs, slicers, drill-throughs, and risk-focused visualizations.
+**DAX (Data Analysis Expressions)**: Implemented to calculate key financial and risk metrics including MTD trends, Charge-Off Rate, Recovery Rate, Average DTI, and portfolio-level aggregations.
+**Power Query**: Used for data transformation, data type handling (especially date parsing), and preparing clean datasets for analytics.
+**GitHub**: Used for version control and project documentation, enabling structured presentation of the analytics workflow and results.
 
 ## Project Workflow 
-**Data Preparation & Modeling**
-Raw loan data was structured into a star schema consisting of one fact table and multiple dimension tables (Customer, Date, State, Loan Purpose) to support scalable and efficient analytics.
+**Data Preparation & Modeling**: Raw loan data was structured into a star schema consisting of one fact table and multiple dimension tables (Customer, Date, State, Loan Purpose) to support scalable and efficient analytics.
+**Data Storage & SQL Analysis**: All tables were loaded into MySQL, where advanced SQL queries were written using joins, CTEs, window functions, and aggregations to extract portfolio, risk, and recovery insights.
+**Data Transformation**: Power Query was used to clean and transform the data, handle date conversions, and ensure data quality before visualization.
+**Metric Development (DAX)**: Key financial and risk metrics such as Total Loan Applications, Funded Amount, Amount Received, Charge-Off Rate, Average Interest Rate, Average DTI, and Recovery Rate were calculated using DAX.
+**Visualization & Reporting**: A multi-page Power BI dashboard was developed to present portfolio performance, Good vs Bad loan analysis, risk drivers, and transaction-level details through interactive visuals, slicers, and drill-throughs.
 
-Data Storage & SQL Analysis
-All tables were loaded into MySQL, where advanced SQL queries were written using joins, CTEs, window functions, and aggregations to extract portfolio, risk, and recovery insights.
+## Key Insights
+- Out of ~50,000 loan applications, approximately 13.7% were charged off, indicating a significant credit risk portion within the overall lending portfolio.
+- The portfolio recorded a Total Funded Amount of $565.94M, while the Total Amount Received reached $614.92M, showing that good loans generated surplus collections beyond the funded principal.
+- Charged-off loans resulted in an estimated loss of ~$36M, highlighting the financial impact of defaults despite recovery efforts.
+- Recovery Rate for Good Loans (Fully Paid + Current) exceeded 100%, whereas Bad Loans (Charged Off) recovered only ~57% of the funded amount, demonstrating a clear contrast in portfolio quality.
+- Charged-off loans exhibited higher Average DTI and higher Average Interest Rates compared to Fully Paid loans, confirming that borrower affordability and risk-based pricing are strong indicators of default risk.
+- Loan grades with lower credit quality showed disproportionately higher charge-off rates, reinforcing the inverse relationship between credit grade and portfolio stability.
 
-Data Transformation
-Power Query was used to clean and transform the data, handle date conversions, and ensure data quality before visualization.
-
-Metric Development (DAX)
-Key financial and risk metrics such as Total Loan Applications, Funded Amount, Amount Received, Charge-Off Rate, Average Interest Rate, Average DTI, and Recovery Rate were calculated using DAX.
-
-Visualization & Reporting
-A multi-page Power BI dashboard was developed to present portfolio performance, Good vs Bad loan analysis, risk drivers, and transaction-level details through interactive visuals, slicers, and drill-throughs.
-
+## Recommendations
+**Strengthen credit screening for high-risk borrowers**: Since ~13.7% of loans are charged off and charged-off borrowers show higher DTI levels, stricter DTI thresholds and enhanced affordability checks should be applied before loan approval.
+**Refine risk-based pricing strategies**: Charged-off loans carry higher average interest rates, indicating pricing alone is not sufficient to offset risk. Combining interest rates with stronger borrower quality metrics can help reduce future losses.
+**Focus on improving recovery mechanisms for bad loans**: With bad loan recovery at ~57% compared to >100% recovery for good loans, early intervention strategies such as proactive reminders and structured repayment plans can help improve recoveries.
+**Prioritize low-risk segments for portfolio growth**: Fully Paid and Current loans contribute positively to the portfolio, generating surplus collections over funded amounts. Expanding lending in these segments can improve overall profitability.
+**Leverage data-driven monitoring for ongoing risk management**: Regular tracking of Charge-Off Rate, Recovery Rate, Avg DTI, and Interest Rate trends through dashboards can help identify emerging risks early and support timely decision-making.
