@@ -97,3 +97,31 @@ CREATE TABLE Fact_Loan (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 ```
 
+## Tools & Technologies 
+**MySQL**
+- Used to store, manage, and query structured loan data. Advanced SQL techniques such as CTEs, window functions, and subqueries were applied for in-depth financial and risk analysis.
+**Power BI**
+- Used for data modeling, DAX-based calculations, and building interactive, multi-page dashboards with KPIs, slicers, drill-throughs, and risk-focused visualizations.
+**DAX (Data Analysis Expressions)**
+- Implemented to calculate key financial and risk metrics including MTD trends, Charge-Off Rate, Recovery Rate, Average DTI, and portfolio-level aggregations.
+**Power Query**
+- Used for data transformation, data type handling (especially date parsing), and preparing clean datasets for analytics.
+**GitHub**
+- Used for version control and project documentation, enabling structured presentation of the analytics workflow and results.
+
+## Project Workflow 
+**Data Preparation & Modeling**
+Raw loan data was structured into a star schema consisting of one fact table and multiple dimension tables (Customer, Date, State, Loan Purpose) to support scalable and efficient analytics.
+
+Data Storage & SQL Analysis
+All tables were loaded into MySQL, where advanced SQL queries were written using joins, CTEs, window functions, and aggregations to extract portfolio, risk, and recovery insights.
+
+Data Transformation
+Power Query was used to clean and transform the data, handle date conversions, and ensure data quality before visualization.
+
+Metric Development (DAX)
+Key financial and risk metrics such as Total Loan Applications, Funded Amount, Amount Received, Charge-Off Rate, Average Interest Rate, Average DTI, and Recovery Rate were calculated using DAX.
+
+Visualization & Reporting
+A multi-page Power BI dashboard was developed to present portfolio performance, Good vs Bad loan analysis, risk drivers, and transaction-level details through interactive visuals, slicers, and drill-throughs.
+
